@@ -21,7 +21,7 @@ Route::group(['prefix' => 'user'], function (){
         return view('user.welcome');
     });
     Route::get('list',function (){
-        return view('user.list');
+        return view('user.list', ['nome1' => 'joao', 'nome2' => 'Maria']);
     });
 
 });

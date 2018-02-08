@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>@yield('title')</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -79,10 +79,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Bem Vindo Usuario
+                   Lista de Usuarios
                 </div>
+                <h2>@yield('name_page')</h2>
+                <p>{{$nome1}} e {{$nome2}}</P>
+
+                <p>@yield('container')</p>
+
             </div>
-            
         </div>
     </body>
 </html>
