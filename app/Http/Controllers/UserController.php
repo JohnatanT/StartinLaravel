@@ -30,6 +30,15 @@ class UserController extends Controller
 
     public function post(Request $request)
     {
+        //VALIDAÇÃO
+        $this->validate($request, [
+            //Nome do campo  => Regras
+            'name' => ['required'],
+            'email' => ['required','email'],
+            'password' => ['required','confirmed']
+        ]);
+
+        
         //var_dump($request->all()); //Retorna todos os dados recebidos
         //var_dump($request->input('email')); //Retorna os dados de um campo especifico
         //var_dump($request->only(['name','email'])); //Retorna os dados de alguns campos escolhidos
