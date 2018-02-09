@@ -79,11 +79,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Lista de Usuarios
+                   APP
                 </div>
                 <h2>@yield('name_page')</h2>
 
-                <p>@yield('container')</p>
+                <div>
+                @yield('container')
+                </div>
+                
 
             </div>
         </div>

@@ -23,5 +23,17 @@ class UserController extends Controller
         return view('user.show',compact('id'));
     }
 
-    
+    public function create()
+    {
+        return view('user.create');
+    }
+
+    public function post(Request $request)
+    {
+        //var_dump($request->all()); //Retorna todos os dados recebidos
+        //var_dump($request->input('email')); //Retorna os dados de um campo especifico
+        //var_dump($request->only(['name','email'])); //Retorna os dados de alguns campos escolhidos
+        var_dump($request->except(['_token'])); //Retorna todos os dados menos os escolhidos na função
+    }
+
 }
