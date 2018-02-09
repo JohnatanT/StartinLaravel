@@ -82,7 +82,6 @@
                    Lista de Usuarios
                 </div>
                 <h2>@yield('name_page')</h2>
-                <p>{{$nome1}} e {{$nome2}}</P>
 
                 <p>@yield('container')</p>
 

@@ -17,11 +17,7 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'user'], function (){
-    Route::get('/', function () {
-        return view('user.welcome');
-    });
-    Route::get('list',function (){
-        return view('user.list', ['nome1' => 'joao', 'nome2' => 'Maria']);
-    });
-
+    Route::get('/', ['uses' => 'UserController@index']);
+    
+    Route::get('list',['uses' => 'UserController@list']);
 });
